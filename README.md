@@ -2,9 +2,13 @@
 
 ## How-To Build
 
-```
-docker build -t btsync .
-```
+1. Copy the BitTorrent Sync 1.4.111 tar archive `btsync_arm-1.4.111.tar.gz` into your local clone of this Git repository.
+
+2. Build the Dockerfile as follows:
+
+   ```
+   docker build -t btsync .
+   ```
 
 ## How-To Run
 

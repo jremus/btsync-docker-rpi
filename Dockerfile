@@ -11,9 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN mkdir -p /opt/btsync/bin /var/opt/btsync
 
-RUN wget --progress=dot:mega -O /tmp/btsync.tar.gz "http://syncapp.bittorrent.com/$BTSYNC_VERSION/btsync_arm-$BTSYNC_VERSION.tar.gz" \
- && tar -xf /tmp/btsync.tar.gz -C /opt/btsync/bin btsync \
- && rm /tmp/btsync.tar.gz
+ADD btsync_arm-1.4.111.tar.gz /opt/btsync/bin
 
 COPY btsync.conf /etc/opt/
 
